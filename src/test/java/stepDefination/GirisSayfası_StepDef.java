@@ -19,7 +19,6 @@ public class GirisSayfası_StepDef {
     public void kullanıcıCrmIçinKullanıcıAdiVeParolaGirer() {
         girisSayfasi.email.sendKeys(ConfigReader.getProperty("eposta"));
         girisSayfasi.sifre.sendKeys(ConfigReader.getProperty("sifre"));
-
     }
 
     @And("Kullanici Giris Yap butonuna tıklar")
