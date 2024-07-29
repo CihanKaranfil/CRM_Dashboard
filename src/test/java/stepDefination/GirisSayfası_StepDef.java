@@ -28,6 +28,6 @@ public class GirisSayfası_StepDef {
     }
     @And("Basarili giris yapildigini dogrular")
     public void basariliGirisYapildiginiDogrular() {
-
+        girisSayfasi.anaSayfa.isDisplayed();
     }
 }
