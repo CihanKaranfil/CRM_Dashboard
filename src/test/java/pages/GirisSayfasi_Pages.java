@@ -16,6 +16,4 @@ public class GirisSayfasi_Pages {
     @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[1]/main/div/div[1]/div") public WebElement anaSayfa ;
 
 
-
-
 }
