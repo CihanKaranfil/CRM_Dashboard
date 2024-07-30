@@ -15,11 +15,6 @@ public class GirisSayfası_StepDef {
         Driver.getDriver().get(ConfigReader.getProperty(crmUrl));
     }
 
-    @When("Kullanıcı crm için kullanıcı adi ve parola girer")
-    public void kullanıcıCrmIçinKullanıcıAdiVeParolaGirer() {
-        girisSayfasi.email.sendKeys(ConfigReader.getProperty("eposta"));
-        girisSayfasi.sifre.sendKeys(ConfigReader.getProperty("sifre"));
-    }
 
     @And("Kullanici Giris Yap butonuna tıklar")
     public void kullaniciGirisYapButonunaTıklar() {
@@ -28,5 +23,18 @@ public class GirisSayfası_StepDef {
     @And("Basarili giris yapildigini dogrular")
     public void basariliGirisYapildiginiDogrular() {
         girisSayfasi.anaSayfa.isDisplayed();
+    }
+
+    @When("Kullanıcı crm admin için kullanıcı adi ve parola girer")
+    public void kullanıcıCrmAdminIçinKullanıcıAdiVeParolaGirer() {
+        girisSayfasi.email.sendKeys(ConfigReader.getProperty("eposta"));
+        girisSayfasi.sifre.sendKeys(ConfigReader.getProperty("sifre"));
+    }
+
+    @When("Kullanici crm Superadmin için kullanici adi ve parola girer")
+    public void kullaniciCrmSuperadminIçinKullaniciAdiVeParolaGirer() {
+        girisSayfasi.email.sendKeys(ConfigReader.getProperty("eposta2"));
+        girisSayfasi.sifre.sendKeys(ConfigReader.getProperty("sifre2"));
+
     }
 }
