@@ -8,4 +8,5 @@ Feature: Admin yeni sirket ekleyebilmeli
     Then Kullanici Sirketler ve Kisilere tıklar
     And Kullanici Sirketlere tıklar
     And Kullanici Yeni Sirket ekle butonuna tıklar
-    Then Kullanici Sirket adini girer
+    Then Kullanici Sirket bilgilerini girer
+    And Kullanici Kaydet butonuna tıklar
