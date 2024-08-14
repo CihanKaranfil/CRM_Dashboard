@@ -10,3 +10,4 @@ Feature: Admin yeni sirket ekleyebilmeli
     And Kullanici Yeni Sirket ekle butonuna tıklar
     Then Kullanici Sirket bilgilerini girer
     And Kullanici Kaydet butonuna tıklar
+    #then assertionlarda kuullan
