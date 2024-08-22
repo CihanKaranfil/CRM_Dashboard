@@ -15,6 +15,7 @@ public class SirketveKisilerStepdefs extends ReusableMethods {
 
     @Then("Kullanici Sirketler ve Kisilere tıklar")
     public void kullaniciSirketlerVeKisilereTıklar() {
+
         sirketveKisiler.sirketveKisiler.click();
 
     }
@@ -32,20 +33,19 @@ public class SirketveKisilerStepdefs extends ReusableMethods {
 
     @Then("Kullanici Sirket bilgilerini girer")
     public void kullaniciSirketBilgileriniGirer() throws InterruptedException {
-        sirketveKisiler.sirketAdi.click();
-        sirketveKisiler.sirketAdi.sendKeys("tester");
-       // sirketveKisiler.sirketAdi.sendKeys(faker.name().name() + "(TEST)",
-       //         Keys.TAB, faker.phoneNumber().phoneNumber());
+        sirketveKisiler.sirketAdi2.click();
 
-       // Thread.sleep(5500);
-       // sirketveKisiler.durum.sendKeys("Müşteri");
-       // // web sitesi, sektör, segment  ekleme
-//
-       // sirketveKisiler.webSitesi.sendKeys("https://" + faker.internet().url(), Keys.TAB, "Giyim", Keys.TAB, "Segment1");
-//
-       // sirketveKisiler.ilgiliKullanici.click();
-       // Thread.sleep(1500);
-       // sirketveKisiler.ilgiliKullanici.sendKeys("n");
+        sirketveKisiler.sirketAdi2.sendKeys(faker.name().name() + "(TEST)",
+                Keys.TAB, faker.phoneNumber().phoneNumber());
+        Thread.sleep(500);
+        sirketveKisiler.durum.sendKeys("Müşteri");
+        // web sitesi, sektör, segment  ekleme
+
+        sirketveKisiler.webSitesi.sendKeys("https://" + faker.internet().url(), Keys.TAB, "Giyim", Keys.TAB, "Segment1");
+
+        sirketveKisiler.ilgiliKullanici.click();
+        Thread.sleep(1500);
+        sirketveKisiler.ilgiliKullanici.sendKeys("n");
 
 
         sirketveKisiler.ticariUnvan.sendKeys("Ticari Unvan", Keys.TAB, "Battalgazi", Keys.TAB, "44170");
