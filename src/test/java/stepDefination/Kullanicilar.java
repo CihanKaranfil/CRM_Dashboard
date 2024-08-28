@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import pages.Kullanicilar_Pages;
 
 public class Kullanicilar {
@@ -29,7 +30,7 @@ public class Kullanicilar {
     }
 
     @And("Kullanici Kaydet butona tıklar")
-    public void kullaniciKaydetButonaTıklar() {
+    public void kullaniciKaydetButonaTıklar() throws InterruptedException {
         kullanicilar.kaydetButton.click();
     }
 }
