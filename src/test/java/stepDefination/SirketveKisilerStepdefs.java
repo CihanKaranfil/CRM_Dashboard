@@ -4,9 +4,12 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import pages.SirketveKisiler_Pages;
 import utilities.ReusableMethods;
+
+import java.util.List;
 
 public class SirketveKisilerStepdefs extends ReusableMethods {
 
@@ -36,11 +39,12 @@ public class SirketveKisilerStepdefs extends ReusableMethods {
         sirketveKisiler.sirketAdi2.click();
 
         sirketveKisiler.sirketAdi2.sendKeys(faker.name().name() + "(TEST)",
-                Keys.TAB, faker.phoneNumber().phoneNumber(), Keys.TAB, "Müşteri");
+                Keys.TAB, faker.phoneNumber().phoneNumber(), Keys.TAB, "M");
         Thread.sleep(500);
 
         //sirketveKisiler.durum.sendKeys("Müşteri");
         // web sitesi, sektör, segment  ekleme
+
 
         sirketveKisiler.webSitesi.sendKeys("https://" + faker.internet().url(), Keys.TAB, "Giyim", Keys.TAB, "Segment1",
                 Keys.TAB,"n");
@@ -59,6 +63,10 @@ public class SirketveKisilerStepdefs extends ReusableMethods {
     @And("Kullanici Kaydet butonuna tıklar")
     public void kullaniciKaydetButonunaTıklar() {
         sirketveKisiler.kaydetButton.click();
+
+
+
+
 
     }
 }
