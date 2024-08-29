@@ -4,16 +4,12 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-import pages.SirketveKisiler_Pages;
+import pages.Sirketler_Pages;
 import utilities.ReusableMethods;
 
-import java.util.List;
+public class SirkelerStepdefs extends ReusableMethods {
 
-public class SirketveKisilerStepdefs extends ReusableMethods {
-
-    SirketveKisiler_Pages sirketveKisiler = new SirketveKisiler_Pages();
+    Sirketler_Pages sirketveKisiler = new Sirketler_Pages();
     Faker faker = new Faker();
 
     @Then("Kullanici Sirketler ve Kisilere tıklar")
@@ -24,8 +20,8 @@ public class SirketveKisilerStepdefs extends ReusableMethods {
     }
 
     @And("Kullanici Sirketlere tıklar")
-    public void kullaniciSirketlereTıklar() {
-        sirketveKisiler.sirketler.click();
+    public void kullaniciSirketlereTıklar() throws InterruptedException {
+        sirketveKisiler.sirketler.click(); Thread.sleep(1000);
     }
 
     @And("Kullanici Yeni Sirket ekle butonuna tıklar")
@@ -61,10 +57,25 @@ public class SirketveKisilerStepdefs extends ReusableMethods {
     }
 
     @And("Kullanici Kaydet butonuna tıklar")
-    public void kullaniciKaydetButonunaTıklar() {
-        sirketveKisiler.kaydetButton.click();
+    public void kullaniciKaydetButonunaTıklar() throws InterruptedException {
+        sirketveKisiler.kaydetButton.click(); Thread.sleep(1000);
 
 
+
+    }
+
+    @And("Kullanici ekledigi sirketi siler")
+    public void kullaniciEkledigiSirketiSiler() throws InterruptedException {
+        sirketveKisiler.sirketlerList.getLast().click();
+        Thread.sleep(1500);
+        click(sirketveKisiler.silButton);
+        Thread.sleep(1000);
+
+        try {
+            sirketveKisiler.silButton4.click();
+        } catch (Exception e) {
+            click(sirketveKisiler.silButton3);
+        }
 
 
 
