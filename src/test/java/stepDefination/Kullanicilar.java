@@ -30,7 +30,7 @@ public class Kullanicilar {
     }
 
     @And("Kullanici Kaydet butona tıklar")
-    public void kullaniciKaydetButonaTıklar() throws InterruptedException {
+    public void kullaniciKaydetButonaTıklar() {
         kullanicilar.kaydetButton.click();
     }
 }
