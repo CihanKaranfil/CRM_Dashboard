@@ -21,7 +21,8 @@ public class SirkelerStepdefs extends ReusableMethods {
 
     @And("Kullanici Sirketlere tıklar")
     public void kullaniciSirketlereTıklar() throws InterruptedException {
-        sirketveKisiler.sirketler.click(); Thread.sleep(1000);
+        sirketveKisiler.sirketler.click();
+        Thread.sleep(1000);
     }
 
     @And("Kullanici Yeni Sirket ekle butonuna tıklar")
@@ -43,7 +44,7 @@ public class SirkelerStepdefs extends ReusableMethods {
 
 
         sirketveKisiler.webSitesi.sendKeys("https://" + faker.internet().url(), Keys.TAB, "Giyim", Keys.TAB, "Segment1",
-                Keys.TAB,"n");
+                Keys.TAB, "n");
 
         //sirketveKisiler.ilgiliKullanici.click();
         //Thread.sleep(1500);
@@ -58,15 +59,22 @@ public class SirkelerStepdefs extends ReusableMethods {
 
     @And("Kullanici Kaydet butonuna tıklar")
     public void kullaniciKaydetButonunaTıklar() throws InterruptedException {
-        sirketveKisiler.kaydetButton.click(); Thread.sleep(1000);
-
+        sirketveKisiler.kaydetButton.click();
+        Thread.sleep(1000);
 
 
     }
 
     @And("Kullanici ekledigi sirketi siler")
     public void kullaniciEkledigiSirketiSiler() throws InterruptedException {
-        sirketveKisiler.sirketlerList.getLast().click();
+
+        try {
+            sirketveKisiler.sirketlerList.getLast().click();
+        } catch (Exception e) {
+            click(sirketveKisiler.sirketlerList.getLast());
+        }
+
+
         Thread.sleep(1500);
         click(sirketveKisiler.silButton);
         Thread.sleep(1000);
@@ -76,7 +84,6 @@ public class SirkelerStepdefs extends ReusableMethods {
         } catch (Exception e) {
             click(sirketveKisiler.silButton3);
         }
-
 
 
     }
