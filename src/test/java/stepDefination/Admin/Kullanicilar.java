@@ -1,11 +1,11 @@
-package stepDefination;
+package stepDefination.Admin;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.Keys;
 
-import pages.Kullanicilar_Pages;
+import pages.Admin.Kullanicilar_Pages;
 
 public class Kullanicilar {
     Kullanicilar_Pages kullanicilar = new Kullanicilar_Pages();
@@ -30,7 +30,17 @@ public class Kullanicilar {
     }
 
     @And("Kullanici Kaydet butona tıklar")
-    public void kullaniciKaydetButonaTıklar() {
-        kullanicilar.kaydetButton.click();
+    public void kullaniciKaydetButonaTıklar() throws InterruptedException {
+        kullanicilar.kaydetButton.click(); Thread.sleep(2000);
+
+
+    }
+
+    @Then("Kullanici ekledigi kullaniciyi siler")
+    public void kullaniciEkledigiKullaniciyiSiler() {
+        kullanicilar.kullaniciList.get(0).click();
+        kullanicilar.silButton.click();
+        kullanicilar.silButton2.click();
+
     }
 }
