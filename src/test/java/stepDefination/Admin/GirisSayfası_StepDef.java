@@ -1,9 +1,9 @@
-package stepDefination;
+package stepDefination.Admin;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import pages.GirisSayfasi_Pages;
+import pages.Admin.GirisSayfasi_Pages;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -19,7 +19,7 @@ public class GirisSayfası_StepDef {
     @And("Kullanici Giris Yap butonuna tıklar")
     public void kullaniciGirisYapButonunaTıklar() throws InterruptedException {
         girisSayfasi.girisyap.click();
-        Thread.sleep(1000);
+        Thread.sleep(1200);
     }
 
     @And("Basarili giris yapildigini dogrular")
