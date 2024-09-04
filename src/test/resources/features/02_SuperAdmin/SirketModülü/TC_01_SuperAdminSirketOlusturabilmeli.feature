@@ -10,4 +10,10 @@ Feature: SuperAdmin yeni sirket olusturmalı
     And Kullanici Sirket bilgilerini doldurur
     And Kullanici Kaydet butona tıklar
 
+    Scenario:SuperAdmin olusturdugu sirketi siler
+      Given Kullanici sirketi siler
+
+
+
+
 
