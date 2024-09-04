@@ -3,6 +3,7 @@ package stepDefination.SuperAdmin;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
 import pages.SuperAdmin.SuperAdminSirketler_Pages;
 
@@ -18,7 +19,6 @@ public class SuperAdminSirketlerDefs {
     @And("Kullanici Yeni Sirket Ekle butonuna tıklar")
     public void kullaniciYeniSirketEkleButonunaTıklar() {
         superAdminSirketler.yeniSirket.click();
-
     }
 
     @And("Kullanici Sirket bilgilerini doldurur")
@@ -30,6 +30,14 @@ public class SuperAdminSirketlerDefs {
                 faker.phoneNumber().cellPhone(),Keys.TAB,faker.phoneNumber().cellPhone(),Keys.TAB, faker.internet().url(),Keys.TAB,
                 faker.address().country(), Keys.TAB);
         superAdminSirketler.vergiNo.sendKeys(faker.number().digits(7));
+
+    }
+
+    @When("Kullanici sirketi siler")
+    public void kullaniciSirketiSiler() throws InterruptedException {
+        superAdminSirketler.sirketList.getLast().click(); Thread.sleep(2500);
+        superAdminSirketler.silButton.click();
+        superAdminSirketler.silButton2.click(); 
 
     }
 }
