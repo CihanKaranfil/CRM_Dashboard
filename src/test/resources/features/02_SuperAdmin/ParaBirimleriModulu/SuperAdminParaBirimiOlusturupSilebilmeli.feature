@@ -8,3 +8,6 @@ Feature: SuperAdmin yeni sirket olusturmalı
     Then Kullanici Yeni para birimi ekle butonuna tıklar
     And Kullanici para birimi bilgilerini doldurur
     And Kullanici para birimini Kaydet butona tıklar
+
+    Scenario: SuperAdmin olusturdugu para birimi siler
+      Given Kullanici en son olusturulan para birimini siler
