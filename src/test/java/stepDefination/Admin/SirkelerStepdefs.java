@@ -39,7 +39,6 @@ public class SirkelerStepdefs extends ReusableMethods {
                 Keys.TAB, faker.phoneNumber().phoneNumber(), Keys.TAB, "M");
         Thread.sleep(500);
 
-
         // web sitesi, sektör, segment  ekleme
 
 
@@ -57,30 +56,11 @@ public class SirkelerStepdefs extends ReusableMethods {
     public void kullaniciKaydetButonunaTıklar() throws InterruptedException {
         sirketveKisiler.kaydetButton.click();
         Thread.sleep(1000);
-
-
     }
 
     @And("Kullanici ekledigi sirketi siler")
     public void kullaniciEkledigiSirketiSiler() throws InterruptedException {
-
-        try {
-            sirketveKisiler.sirketlerList.getLast().click();
-        } catch (Exception e) {
-            click(sirketveKisiler.sirketlerList.getLast());
-        }
-
-
-        Thread.sleep(1500);
-        click(sirketveKisiler.silButton);
-        Thread.sleep(1000);
-
-        try {
-            sirketveKisiler.silButton4.click();
-        } catch (Exception e) {
-            click(sirketveKisiler.silButton3);
-        }
-
+        sirketveKisiler.sirketlerList.getLast().click();
 
     }
 }

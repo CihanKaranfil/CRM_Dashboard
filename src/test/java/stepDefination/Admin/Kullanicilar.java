@@ -6,14 +6,15 @@ import io.cucumber.java.en.Then;
 import org.openqa.selenium.Keys;
 
 import pages.Admin.Kullanicilar_Pages;
+import utilities.ReusableMethods;
 
-public class Kullanicilar {
+public class Kullanicilar  extends ReusableMethods {
     Kullanicilar_Pages kullanicilar = new Kullanicilar_Pages();
     Faker faker = new Faker();
 
     @And("Kullanici Kullanicilara tıklar")
     public void kullaniciKullanicilaraTıklar() {
-        kullanicilar.kullanicilar.click();
+        click(kullanicilar.kullanicilar);
 
     }
 

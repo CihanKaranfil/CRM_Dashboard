@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         monochrome = true,
         features = "./src/test/resources/features",
         glue = {"stepDefination", "hooks"},
-        tags = "@parabirimi",
+        tags = "@Sirket11",
         dryRun = false
 )
 public class

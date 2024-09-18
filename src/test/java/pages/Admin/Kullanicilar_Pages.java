@@ -12,7 +12,7 @@ public class Kullanicilar_Pages {
     public Kullanicilar_Pages(){
         PageFactory.initElements(Driver.getDriver(),this);}
 
-    @FindBy(xpath = "//*[@id=\"radix-:rh:\"]/ul/li[1]/a/div/span") public WebElement kullanicilar ;
+    @FindBy(xpath = "(//*[@class='flex-1 truncate'])[1]") public WebElement kullanicilar ;
     @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[1]/main/div/div[1]/div[1]/button[1]") public WebElement yeniKullaniciEkle ;
     @FindBy(xpath = "//*[@placeholder='Tam Adı']") public WebElement kullaniciAdi ;
     @FindBy(xpath = "//*[@type='submit']") public WebElement kaydetButton ;
