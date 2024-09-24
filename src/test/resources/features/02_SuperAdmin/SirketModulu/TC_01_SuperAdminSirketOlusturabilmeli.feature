@@ -1,4 +1,4 @@
-@Ortaktag
+@SuperadminSirket
 Feature: SuperAdmin yeni sirket olusturmalı
   Scenario: SuperAdmin yeni sirket olusturur
     Given Kullanici "crmUrl" sayfasına gider

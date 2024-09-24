@@ -1,4 +1,4 @@
-@Ortaktag
+@crm
   Feature: Kullanıcı Hesap Bilgilerini Girerek Login Olmalı
     Scenario: Kullanıcı CRM sayfasına giriş yapar
       Given Kullanici "crmUrl" sayfasına gider

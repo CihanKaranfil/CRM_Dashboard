@@ -22,7 +22,7 @@ public class SirkelerStepdefs extends ReusableMethods {
     @And("Kullanici Sirketlere tıklar")
     public void kullaniciSirketlereTıklar() throws InterruptedException {
         sirketveKisiler.sirketler.click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
 
     @And("Kullanici Yeni Sirket ekle butonuna tıklar")
@@ -38,6 +38,7 @@ public class SirkelerStepdefs extends ReusableMethods {
         sirketveKisiler.sirketAdi2.sendKeys(faker.name().name() + "(TEST)",
                 Keys.TAB, faker.phoneNumber().phoneNumber(), Keys.TAB, "M");
         Thread.sleep(500);
+
 
         // web sitesi, sektör, segment  ekleme
 
@@ -56,14 +57,29 @@ public class SirkelerStepdefs extends ReusableMethods {
     public void kullaniciKaydetButonunaTıklar() throws InterruptedException {
         sirketveKisiler.kaydetButton.click();
         Thread.sleep(1000);
+
+
     }
 
     @And("Kullanici ekledigi sirketi siler")
     public void kullaniciEkledigiSirketiSiler() throws InterruptedException {
-        click(sirketveKisiler.sirketlerList.getLast()); Thread.sleep(1000);
 
-        sirketveKisiler.silButton.click(); Thread.sleep(1000);
-        sirketveKisiler.silButton4.click(); Thread.sleep(1000);
+        try {
+            sirketveKisiler.sirketlerList.getLast().click();
+        } catch (Exception e) {
+            click(sirketveKisiler.sirketlerList.getLast());
+        }
+
+
+        Thread.sleep(1500);
+        click(sirketveKisiler.silButton);
+        Thread.sleep(1000);
+
+        try {
+            sirketveKisiler.silButton4.click();
+        } catch (Exception e) {
+            click(sirketveKisiler.silButton3);
+        }
 
 
     }
