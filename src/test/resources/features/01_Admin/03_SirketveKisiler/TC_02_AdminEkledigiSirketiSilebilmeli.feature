@@ -1,4 +1,4 @@
-@Sirket11
+@Ortaktag
 Feature: Admin yeni sirket ekleyebilmeli
   Scenario: Admin yeni sirket ekler
     Given Kullanici "crmUrl" sayfasına gider

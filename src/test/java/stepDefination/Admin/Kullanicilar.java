@@ -38,10 +38,15 @@ public class Kullanicilar  extends ReusableMethods {
     }
 
     @Then("Kullanici ekledigi kullaniciyi siler")
-    public void kullaniciEkledigiKullaniciyiSiler() {
-        kullanicilar.kullaniciList.get(0).click();
-        kullanicilar.silButton.click();
-        kullanicilar.silButton2.click();
+    public void kullaniciEkledigiKullaniciyiSiler() throws InterruptedException {
+        kullanicilar.kullaniciList.getLast().click(); Thread.sleep(1000);
+        kullanicilar.silButton.click();Thread.sleep(500);
+        try {
+            kullanicilar.silButton2.click();
+        } catch (Exception e) {
+            kullanicilar.silButton3.click();
+        }
+
 
     }
 }

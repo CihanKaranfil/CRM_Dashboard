@@ -17,7 +17,8 @@ public class Kullanicilar_Pages {
     @FindBy(xpath = "//*[@placeholder='Tam Adı']") public WebElement kullaniciAdi ;
     @FindBy(xpath = "//*[@type='submit']") public WebElement kaydetButton ;
     @FindBy(xpath = "//*[@role='menuitem'][2]") public WebElement silButton ;
-    @FindBy(xpath = "inline-flex items-center justify-center text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none text-success-foreground h-8 px-4 py-[10px] bg-destructive border border-destructive rounded hover:bg-destructive-200") public WebElement silButton2 ;
+    @FindBy(xpath = "(//button[@type='button'])[19]") public WebElement silButton2 ;
+    @FindBy(xpath = "//*[@id=\"radix-:r1h:\"]/div[2]/button[2]") public WebElement silButton3 ;
 
 
 

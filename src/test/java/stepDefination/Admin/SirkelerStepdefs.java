@@ -22,7 +22,7 @@ public class SirkelerStepdefs extends ReusableMethods {
     @And("Kullanici Sirketlere tıklar")
     public void kullaniciSirketlereTıklar() throws InterruptedException {
         sirketveKisiler.sirketler.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
 
     @And("Kullanici Yeni Sirket ekle butonuna tıklar")
@@ -60,7 +60,11 @@ public class SirkelerStepdefs extends ReusableMethods {
 
     @And("Kullanici ekledigi sirketi siler")
     public void kullaniciEkledigiSirketiSiler() throws InterruptedException {
-        sirketveKisiler.sirketlerList.getLast().click();
+        click(sirketveKisiler.sirketlerList.getLast()); Thread.sleep(1000);
+
+        sirketveKisiler.silButton.click(); Thread.sleep(1000);
+        sirketveKisiler.silButton4.click(); Thread.sleep(1000);
+
 
     }
 }
