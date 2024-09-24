@@ -1,4 +1,4 @@
-@Ortaktag
+@Kullanıcı
 Feature: Admin  yeni kullanici ekleyebilmeli
   Scenario: Admin yeni kullanici ekler
     Given Kullanici "crmUrl" sayfasına gider
