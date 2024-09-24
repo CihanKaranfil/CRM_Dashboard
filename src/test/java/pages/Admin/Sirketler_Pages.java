@@ -12,8 +12,8 @@ public class Sirketler_Pages {
     public Sirketler_Pages(){
         PageFactory.initElements(Driver.getDriver(),this);}
 
-    @FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/div/div/ul/li[3]/div[1]/div[1]/div") public WebElement sirketveKisiler ;
-    @FindBy(xpath = "//*[@id=\"radix-:rh:\"]/ul/li[2]/a/div/span") public WebElement sirketler ;
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/div/div/ul/li[3]/div[1]/div[1]/span") public WebElement sirketveKisiler ;
+    @FindBy(xpath = "(//*[@class='flex-1 truncate'])[2]") public WebElement sirketler ;
     @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[1]/main/div/div[1]/div[1]/button[1]") public WebElement yeniSirket ;
     @FindBy(xpath = "//*[@id=\"radix-:r1q:\"]/div[2]/div[1]/div[1]/div") public WebElement sirketAdi ;
     @FindBy(xpath = "//*[@placeholder=\"Şirket Adı\"]") public WebElement sirketAdi2 ;
@@ -23,8 +23,8 @@ public class Sirketler_Pages {
     @FindBy(xpath = "//*[@id=\"radix-:r1c:\"]/div[2]/div[3]/div[3]/button") public WebElement ilgiliKullanici ;
     @FindBy(xpath = "//*[@placeholder='Ticaret Ünvanı']") public WebElement ticariUnvan ;
     @FindBy(xpath = "//*[@type='submit']") public WebElement kaydetButton ;
-    @FindBy(xpath = "//*[@role='menuitem'][4]") public WebElement silButton ;
-    @FindBy(xpath = "(//*[@type='button'])[27]") public WebElement silButton2 ;
+    @FindBy(xpath = "//div[@role='menuitem'][4]") public WebElement silButton ;
+    @FindBy(xpath = "//*[@id=\"radix-:r1s:\"]/div[2]/button[2]/text()") public WebElement silButton2 ;
     @FindBy(xpath = "//*[@id=\"radix-:rb0:\"]/div[2]/button[2]") public WebElement silButton3 ;
     @FindBy(xpath = "//*[@class='inline-flex items-center justify-center text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none text-success-foreground h-8 px-4 py-[10px] bg-destructive border border-destructive rounded hover:bg-destructive-200']") public WebElement silButton4 ;
 
