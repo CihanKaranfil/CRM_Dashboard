@@ -1,4 +1,4 @@
-@Ortaktag
+@Kullanıcı1
 Feature: Admin  yeni ekledigi kullanıcıyı silebilmeli
   Scenario: Admin yeni ekledigi kullanıcıyı siler
     Given Kullanici "crmUrl" sayfasına gider
