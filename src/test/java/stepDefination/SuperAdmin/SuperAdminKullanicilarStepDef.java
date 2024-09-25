@@ -28,7 +28,6 @@ public class SuperAdminKullanicilarStepDef {
         superAdminKullanicilar.kullaniciAdi.sendKeys("TEST" + faker.number().digits(3), Keys.TAB,
                 faker.internet().emailAddress(), Keys.TAB,faker.name().firstName(), Keys.TAB,faker.internet().password(5,7));
         Thread.sleep(1000);
-
     }
 
     @Then("Yeni Kullanici Kaydet butonuna tıklar")
