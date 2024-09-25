@@ -6,15 +6,14 @@ import io.cucumber.java.en.Then;
 import org.openqa.selenium.Keys;
 
 import pages.Admin.Kullanicilar_Pages;
-import utilities.ReusableMethods;
 
-public class Kullanicilar  extends ReusableMethods {
+public class Kullanicilar {
     Kullanicilar_Pages kullanicilar = new Kullanicilar_Pages();
     Faker faker = new Faker();
 
     @And("Kullanici Kullanicilara tıklar")
     public void kullaniciKullanicilaraTıklar() {
-        click(kullanicilar.kullanicilar);
+        kullanicilar.kullanicilar.click();
 
     }
 
@@ -38,15 +37,10 @@ public class Kullanicilar  extends ReusableMethods {
     }
 
     @Then("Kullanici ekledigi kullaniciyi siler")
-    public void kullaniciEkledigiKullaniciyiSiler() throws InterruptedException {
-        kullanicilar.kullaniciList.getLast().click(); Thread.sleep(1000);
-        kullanicilar.silButton.click();Thread.sleep(500);
-        try {
-            kullanicilar.silButton2.click();
-        } catch (Exception e) {
-            kullanicilar.silButton3.click();
-        }
-
+    public void kullaniciEkledigiKullaniciyiSiler() {
+        kullanicilar.kullaniciList.get(0).click();
+        kullanicilar.silButton.click();
+        kullanicilar.silButton2.click();
 
     }
 }
