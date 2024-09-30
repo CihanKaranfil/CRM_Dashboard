@@ -5,15 +5,16 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.Keys;
 import pages.SuperAdmin.SuperAdminKullanicilar_Pages;
+import utilities.ReusableMethods;
 
-public class SuperAdminKullanicilarStepDef {
+public class SuperAdminKullanicilarStepDef extends ReusableMethods {
     SuperAdminKullanicilar_Pages superAdminKullanicilar = new SuperAdminKullanicilar_Pages();
     Faker faker = new Faker();
 
     @When("Kullanici Kullanıcılar menusune tıklar")
     public void kullanici_kullanıcılar_menusune_tıklar() throws InterruptedException {
         superAdminKullanicilar.kullanicilarMenu.click();
-        Thread.sleep(500);
+        Thread.sleep(1500);
 
     }
 
@@ -33,6 +34,14 @@ public class SuperAdminKullanicilarStepDef {
     @Then("Yeni Kullanici Kaydet butonuna tıklar")
     public void yeni_kullanici_kaydet_butonuna_tıklar() {
         superAdminKullanicilar.kaydetButton.click();
+
+    }
+
+    @Then("Kullanici eklenen son kullaniciyi siler")
+    public void kullaniciEklenenSonKullaniciyiSiler() {
+      click(superAdminKullanicilar.kullanicilarList.getLast());
+      superAdminKullanicilar.silButton.click();
+      superAdminKullanicilar.silButton2.click();
 
     }
 }
