@@ -13,7 +13,7 @@ public class Sirketler_Pages {
         PageFactory.initElements(Driver.getDriver(),this);}
 
     @FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/div/div/ul/li[3]/div[1]/div[1]/div") public WebElement sirketveKisiler ;
-    @FindBy(xpath = "//*[@id=\"radix-:rh:\"]/ul/li[2]/a/div/span") public WebElement sirketler ;
+    @FindBy(xpath = "//*[@class='block pl-9 first:pt-4 last:pb-4 relative before:absolute first:before:top-4 before:top-0 before:left-4 before:w-[3px] kk'][2]") public WebElement sirketler ;
     @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[1]/main/div/div[1]/div[1]/button[1]") public WebElement yeniSirket ;
     @FindBy(xpath = "//*[@id=\"radix-:r1q:\"]/div[2]/div[1]/div[1]/div") public WebElement sirketAdi ;
     @FindBy(xpath = "//*[@placeholder=\"Şirket Adı\"]") public WebElement sirketAdi2 ;
