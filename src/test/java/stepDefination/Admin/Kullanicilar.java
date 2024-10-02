@@ -32,8 +32,6 @@ public class Kullanicilar extends ReusableMethods {
     @And("Kullanici Kaydet butona tıklar")
     public void kullaniciKaydetButonaTıklar() throws InterruptedException {
         kullanicilar.kaydetButton.click(); Thread.sleep(2000);
-
-
     }
 
     @Then("Kullanici ekledigi kullaniciyi siler")
